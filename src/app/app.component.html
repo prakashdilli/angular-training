@@ -1,14 +1,10 @@
-<div class="header">
-  <app-header></app-header>
-</div>
-<div class="content">
-  <div class="main-area">
-    <app-main-area></app-main-area>
-  </div>
-  <div class="sidebar">
-    <app-sidebar></app-sidebar>
-  </div>
-</div>
-<div class="footer">
-  <app-footer></app-footer>
-</div>
+<!-- <button (click)="changeUserDetails()">Click Me!</button> -->
+<app-child [user]="userDetails" (addNewUser)="newUserEmitted($event)"></app-child>
+
+
+
+<p>User List</p>
+<!-- <p *ngFor="let user of users"> {{user}} </p> -->
+<ng-container *ngFor="let user of users">
+    <app-user [userDetail]="user"></app-user>
+</ng-container>
