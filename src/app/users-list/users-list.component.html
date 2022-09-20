@@ -1,16 +1,5 @@
 <h3>Users List</h3>
 
 <ng-container *ngFor="let user of usersList,index as i">
-    <div class="user">
-        <div class="profile-pic">
-            <img [src]="user.avatar" alt="">
-        </div>
-        <div class="user-details">
-            <p class="user-name"> {{user.first_name}} {{user.last_name}} </p>
-            <p class="user-email">{{user.email}}</p>
-        </div>
-        <div class="cta">
-            <span class="remove-user" (click)="removeUser(i)">Remove User</span>
-        </div>
-    </div>
+    <app-user-detail [userDetail]="user" [userIndex]="i" (removeUserEvent)="userRemoved($event)"></app-user-detail>
 </ng-container>

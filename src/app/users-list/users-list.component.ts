@@ -63,7 +63,7 @@ export class UsersListComponent implements OnInit {
     ]
   }
 
-  removeUser(userIndex){
+  userRemoved(userIndex){
     console.log('before',userIndex,this.usersList)
     this.usersList.splice(userIndex,1)
     console.log('after',userIndex,this.usersList)
