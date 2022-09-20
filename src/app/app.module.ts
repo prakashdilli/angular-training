@@ -10,7 +10,9 @@ import { FooterComponent } from './footer/footer.component';
 import { FormsModule } from '@angular/forms';
 import { ParentComponent } from './parent/parent.component';
 import { ChildComponent } from './child/child.component';
-import { UserComponent } from './user/user.component'
+import { AboutusComponent } from './aboutus/aboutus.component';
+import { ContactusComponent } from './contactus/contactus.component';
+import { UsersListComponent } from './users-list/users-list.component'
 @NgModule({
   declarations: [
     AppComponent,
@@ -20,7 +22,9 @@ import { UserComponent } from './user/user.component'
     FooterComponent,
     ParentComponent,
     ChildComponent,
-    UserComponent,
+    AboutusComponent,
+    ContactusComponent,
+    UsersListComponent,
   
   ],
   imports: [
