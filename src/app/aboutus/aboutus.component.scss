@@ -1,0 +1,16 @@
+.about-us-wrapper{
+    border: 1px solid #333;
+}
+
+.inner-wrapper{
+    display:flex;
+    .side-menu{
+        width: 150px;
+    }
+    .about-us-router{
+        width: 400px;
+        border: 1px solid #333;
+        padding: 50px;
+    }
+
+}

@@ -13,7 +13,9 @@ import { ChildComponent } from './child/child.component';
 import { AboutusComponent } from './aboutus/aboutus.component';
 import { ContactusComponent } from './contactus/contactus.component';
 import { UsersListComponent } from './users-list/users-list.component';
-import { UserDetailComponent } from './user-detail/user-detail.component'
+import { UserDetailComponent } from './user-detail/user-detail.component';
+import { Component1Component } from './component1/component1.component';
+import { Component2Component } from './component2/component2.component'
 @NgModule({
   declarations: [
     AppComponent,
@@ -27,6 +29,8 @@ import { UserDetailComponent } from './user-detail/user-detail.component'
     ContactusComponent,
     UsersListComponent,
     UserDetailComponent,
+    Component1Component,
+    Component2Component,
   
   ],
   imports: [
