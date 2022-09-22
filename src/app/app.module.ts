@@ -15,7 +15,8 @@ import { ContactusComponent } from './contactus/contactus.component';
 import { UsersListComponent } from './users-list/users-list.component';
 import { UserDetailComponent } from './user-detail/user-detail.component';
 import { Component1Component } from './component1/component1.component';
-import { Component2Component } from './component2/component2.component'
+import { Component2Component } from './component2/component2.component';
+import { PageNotFoundComponent } from './page-not-found/page-not-found.component'
 @NgModule({
   declarations: [
     AppComponent,
@@ -31,6 +32,7 @@ import { Component2Component } from './component2/component2.component'
     UserDetailComponent,
     Component1Component,
     Component2Component,
+    PageNotFoundComponent,
   
   ],
   imports: [

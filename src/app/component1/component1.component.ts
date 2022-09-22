@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-component1',
@@ -7,9 +8,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class Component1Component implements OnInit {
 
-  constructor() { }
+  constructor(private route:ActivatedRoute) { }
 
   ngOnInit() {
+    this.route.params.subscribe((paramsData)=>{
+      console.log('paramsData',paramsData)
+      // make a get api call to server : getUserById/paramsData['user']
+    })
   }
 
 }
