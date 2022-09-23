@@ -18,6 +18,8 @@ import { Component1Component } from './component1/component1.component';
 import { Component2Component } from './component2/component2.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import { HomeComponent } from './home/home.component'
+import { HttpClientModule } from '@angular/common/http';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -40,7 +42,8 @@ import { HomeComponent } from './home/home.component'
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
