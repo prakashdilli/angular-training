@@ -16,7 +16,8 @@ import { UsersListComponent } from './users-list/users-list.component';
 import { UserDetailComponent } from './user-detail/user-detail.component';
 import { Component1Component } from './component1/component1.component';
 import { Component2Component } from './component2/component2.component';
-import { PageNotFoundComponent } from './page-not-found/page-not-found.component'
+import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
+import { HomeComponent } from './home/home.component'
 @NgModule({
   declarations: [
     AppComponent,
@@ -33,6 +34,7 @@ import { PageNotFoundComponent } from './page-not-found/page-not-found.component
     Component1Component,
     Component2Component,
     PageNotFoundComponent,
+    HomeComponent,
   
   ],
   imports: [
