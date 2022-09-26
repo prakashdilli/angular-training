@@ -1,8 +1,0 @@
-<p>contactus works!</p>
-
-
-<ng-container *ngFor="let user of usersList">
-    <!-- <p> <a [routerLink]="['user',user.id]">{{user.first_name}}</a> </p> -->
-    <p> <a (click)="navigateToUser(user.id)">{{user.first_name}}</a> </p>
-</ng-container>
-<router-outlet></router-outlet>

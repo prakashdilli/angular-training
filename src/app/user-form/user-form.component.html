@@ -1,0 +1,11 @@
+<p> {{!isUpdate?'Add User Form':'Edit User Form'}}</p>
+
+<p>User Name</p>
+<input type="text" [(ngModel)]="name">
+<p>Email</p>
+<input type="text" [(ngModel)]="email">
+
+<div>
+    <button *ngIf="isUpdate" (click)="updateUser()">update User</button>
+    <button *ngIf="!isUpdate" (click)="addUser()">Add User</button>
+</div>
