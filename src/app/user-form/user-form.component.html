@@ -1,11 +1,17 @@
 <p> {{!isUpdate?'Add User Form':'Edit User Form'}}</p>
 
 <p>User Name</p>
-<input type="text" [(ngModel)]="name">
+<input type="text" name="name" required [(ngModel)]="user.name" #name="ngModel">
+<ng-container *ngIf="name.invalid && (name.touched || name.dirty)">
+    <p style="color:red"> Error in Input Field</p>
+</ng-container>
 <p>Email</p>
-<input type="text" [(ngModel)]="email">
+<input type="text" [(ngModel)]="user.email" required name="email" #email="ngModel">
+<ng-container *ngIf="email.invalid && (email.touched || email.dirty)">
+    <p style="color:red"> Error in Input Field</p>
+</ng-container>
 
 <div>
     <button *ngIf="isUpdate" (click)="updateUser()">update User</button>
-    <button *ngIf="!isUpdate" (click)="addUser()">Add User</button>
+    <button *ngIf="!isUpdate" (click)="addUser()" [disabled]="name.invalid">Add User</button>
 </div>

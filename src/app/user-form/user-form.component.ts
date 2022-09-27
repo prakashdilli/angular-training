@@ -9,6 +9,7 @@ import { AppService } from '../app.service';
 })
 export class UserFormComponent implements OnInit {
   name:any;
+  user = {}
   email:any;
   userId:any
   isUpdate:boolean = false;
