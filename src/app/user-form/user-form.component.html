@@ -1,5 +1,36 @@
 <p> {{!isUpdate?'Add User Form':'Edit User Form'}}</p>
 
+<div [formGroup]="user">
+    <p>User Name</p>
+    <input type="text" name="name" formControlName="name">
+    <!-- {{form['email'].errors|json}} -->
+
+    <ng-container *ngIf="form['name'].invalid && (form['name'].touched || form['name'].dirty)">
+        <!-- <p style="color:red"> Error in Input Field</p> -->
+        <p style="color:red" *ngIf="form['name'].errors?.required"> Name is required</p>
+        <p style="color:red" *ngIf="form['name'].errors?.minlength"> Name should be length of 4</p>
+    </ng-container>
+    <p>Email</p>
+    <input type="text" name="email" formControlName="email">
+    <ng-container *ngIf="form['email'].invalid && (form['email'].touched || form['email'].dirty)">
+        <!-- <p style="color:red"> Error in Input Field</p> -->
+        <p style="color:red" *ngIf="form['email'].errors?.required"> Email is required</p>
+        <p style="color:red" *ngIf="form['email'].errors?.email"> Email should be a valid one</p>
+        <!-- {{name.errors|json}} -->
+    </ng-container>
+    
+</div>
+
+
+<div>
+    <button *ngIf="isUpdate" (click)="updateUser()">update User</button>
+    <button *ngIf="!isUpdate" (click)="addUser()" [disabled]="user.invalid">Add User</button>
+</div>
+
+
+<!-- 
+<p> {{!isUpdate?'Add User Form':'Edit User Form'}}</p>
+
 <p>User Name</p>
 <input type="text" name="name" required [(ngModel)]="user.name" #name="ngModel">
 <ng-container *ngIf="name.invalid && (name.touched || name.dirty)">
@@ -14,4 +45,4 @@
 <div>
     <button *ngIf="isUpdate" (click)="updateUser()">update User</button>
     <button *ngIf="!isUpdate" (click)="addUser()" [disabled]="name.invalid">Add User</button>
-</div>
+</div> -->
