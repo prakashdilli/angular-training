@@ -1,5 +1,8 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
+import { AuthGuardGuard } from './auth-guard.guard';
+import { FormsComponent } from './forms/forms.component';
+import { LoginComponent } from './login/login.component';
 import { UserFormComponent } from './user-form/user-form.component';
 import { UsersListComponent } from './users-list/users-list.component';
 
@@ -10,16 +13,21 @@ const routes: Routes = [
     pathMatch:'full'
   },
   {
+    path:'login',
+    component:LoginComponent
+  },
+  {
     path:'users-list',
-    component:UsersListComponent
+    component:UsersListComponent,
+    // canActivate:[AuthGuardGuard]
   },
   {
     path:'users-list/add-user',
-    component:UserFormComponent
+    component:FormsComponent
   },
   {
     path:'users-list/edit-user/:userId',
-    component:UserFormComponent
+    component:FormsComponent
   }
 ];
 

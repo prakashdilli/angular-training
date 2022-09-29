@@ -1,0 +1,27 @@
+<p>forms works!</p>
+<ng-container [formGroup]="user">
+    <div>
+        <input type="text" name="name" formControlName="name" placeholder="name">
+    </div>
+    <div *ngIf="form['name'].invalid && (form['name'].touched || form['name'].dirty)">
+    <!-- <p style="color:red">Input field is required</p> -->
+    <p *ngIf="form['name'].errors?.required" style="color:red">Input field is required</p>
+    <p *ngIf="form['name'].errors?.minlength" style="color:red">Min length required is 4</p>
+</div>
+    <div>
+        <input type="text" formControlName="email" placeholder="email">
+    </div>
+    <div *ngIf="form['email'].invalid && (form['email'].touched || form['email'].dirty)">
+        <!-- <p style="color:red">Input field is required</p> -->
+        <p *ngIf="form['email'].errors?.required" style="color:red">Input field is required</p>
+        <!-- <p *ngIf="form['email'].errors?.minlength" style="color:red">Min length required is 4</p> -->
+    </div>
+    <select name="" id="" formControlName="role">
+<input type="text" name="" id="">
+        <option *ngFor="let role of roles" value="{{role.roleId}}">{{role.roleName}}</option>
+        <!-- <option value="">one</option>
+        <option value="">two</option>
+        <option value="">three</option> -->
+    </select>
+</ng-container>
+<button [disabled]="user.invalid" (click)="submit()">Submit</button>

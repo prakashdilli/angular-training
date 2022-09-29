@@ -12,12 +12,19 @@ export class UsersListComponent implements OnInit {
   constructor(private appService:AppService,private router:Router,private aRoute:ActivatedRoute) { }
 
   ngOnInit() {
+    // if(!localStorage.getItem('token')){
+    //   this.router.navigate(['/login'])
+    // }
     this.getAllUsers()
   }
 
   getAllUsers(){
     this.appService.getAllUsers().subscribe((usersList)=>{
       this.usersList = usersList
+    },()=>{
+      // if status = 401
+      // show toast "you are not authorized"
+      // redirect to login
     })
   }
 
